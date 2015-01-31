@@ -1,3 +1,6 @@
+![Imagen](https://github.com/alu0100315462/guia_nodejs/blob/master/nodetricolor.png)
+
+
 #Guía de instalación y uso de Node.js
 
 ##Instalación
@@ -34,11 +37,11 @@ node
 console.log("Hola Mundo");
 ```
 * obtenemos la siguiente salida:
-fotonode1
+![Imagen](https://github.com/alu0100315462/guia_nodejs/blob/master/node1.PNG)
 
 ####Uso mediante un fichero:
 * Si escribimos las órdenes en un fichero de texto, podemos ejecutar todo el fichero con node. Ejecutando un fichero con la orden antes usada:
-fotonode2
+![Imagen](https://github.com/alu0100315462/guia_nodejs/blob/master/node2.PNG)
 
 ####Creando un servidor:
 Para crear un servidor local donde poder ver en nuestro navegador la salida de la ejecución de los ficheros node.js, haremos lo siguiente:
@@ -62,4 +65,4 @@ Después abriremos en el navegador la página:
 localhost:8080
 ```
 En mi caso, ya que he ejecutado el servidor desde el entorno Cloud9, abro la página como **nombreproyecto-nombreusuario.c9.io/**
-fotonode3
+![Imagen](https://github.com/alu0100315462/guia_nodejs/blob/master/node3.PNG)
