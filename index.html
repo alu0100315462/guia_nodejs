@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Guia nodejs by alu0100315462</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Guia nodejs</h1>
+          <h2></h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/alu0100315462/guia_nodejs/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/alu0100315462/guia_nodejs/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/alu0100315462/guia_nodejs" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p><img src="https://github.com/alu0100315462/guia_nodejs/blob/master/nodetricolor.png" alt="Imagen"></p>
+
+<h1>
+<a id="guía-de-instalación-y-uso-de-nodejs" class="anchor" href="#gu%C3%ADa-de-instalaci%C3%B3n-y-uso-de-nodejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guía de instalación y uso de Node.js</h1>
+
+<h2>
+<a id="instalación" class="anchor" href="#instalaci%C3%B3n" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instalación</h2>
+
+<ol>
+<li><p>Descargar Node.js desde la <a href="http://nodejs.org/">página de oficial de Node.js</a> haciendo
+click en el botón INSTALL. Dependiendo del sistema operativo en el que se encuentre, se 
+descargará un tipo de fichero diferente.
+En Linux obtenemos un archivo comprimido .tar.gz.</p></li>
+<li><p>Descomprimimos el fichero y con la consola nos situamos dentro de la carpeta descomprimida:</p></li>
+</ol>
+
+<pre><code>cd node-v0.10.36
+</code></pre>
+
+<ol>
+<li>Ejecutamos los siguientes comandos:</li>
+</ol>
+
+<pre><code>./configure
+make
+sudo make install
+</code></pre>
+
+<ol>
+<li>Comprobamos que se ha instalado correctamente:</li>
+</ol>
+
+<pre><code>node --version
+</code></pre>
+
+<h2>
+<a id="uso-de-nodejs" class="anchor" href="#uso-de-nodejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Uso de Node.js</h2>
+
+<p>Haremos un sencillo ejemplo de uso haciendo que Node.js imprima un mensaje por pantalla, podemos escribir la orden directamente en node o en un fichero de extensión js.</p>
+
+<h4>
+<a id="uso-directo-de-node" class="anchor" href="#uso-directo-de-node" aria-hidden="true"><span class="octicon octicon-link"></span></a>Uso directo de node:</h4>
+
+<ul>
+<li>Abrir Node en la consola:</li>
+</ul>
+
+<pre><code>node
+</code></pre>
+
+<ul>
+<li>e introducir la orden:</li>
+</ul>
+
+<pre><code>console.log("Hola Mundo");
+</code></pre>
+
+<ul>
+<li>obtenemos la siguiente salida:
+<img src="https://github.com/alu0100315462/guia_nodejs/blob/master/node1.PNG" alt="Imagen">
+</li>
+</ul>
+
+<h4>
+<a id="uso-mediante-un-fichero" class="anchor" href="#uso-mediante-un-fichero" aria-hidden="true"><span class="octicon octicon-link"></span></a>Uso mediante un fichero:</h4>
+
+<ul>
+<li>Si escribimos las órdenes en un fichero de texto, podemos ejecutar todo el fichero con node. Ejecutando un fichero con la orden antes usada:
+<img src="https://github.com/alu0100315462/guia_nodejs/blob/master/node2.PNG" alt="Imagen">
+</li>
+</ul>
+
+<h4>
+<a id="creando-un-servidor" class="anchor" href="#creando-un-servidor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creando un servidor:</h4>
+
+<p>Para crear un servidor local donde poder ver en nuestro navegador la salida de la ejecución de los ficheros node.js, haremos lo siguiente:</p>
+
+<ul>
+<li>Escribir el siguiente código y ejecutarlo con node:</li>
+</ul>
+
+<pre><code>var http = require('http');
+var server = http.createServer();
+function control(petic, resp) {
+resp.writeHead(200, {'content-type': 'text/plain'});
+resp.write("Hola Mundo");
+resp.end();
+}
+server.on('request', control);
+server.listen(8080);
+</code></pre>
+
+<p>Se puede poner en la línea <strong>server.listen(8080);</strong> cualquier puerto que se quiera utilizar.</p>
+
+<p>Después abriremos en el navegador la página:</p>
+
+<pre><code>localhost:8080
+</code></pre>
+
+<p>En mi caso, ya que he ejecutado el servidor desde el entorno Cloud9, abro la página como <strong>nombreproyecto-nombreusuario.c9.io/</strong>
+<img src="https://github.com/alu0100315462/guia_nodejs/blob/master/node3.PNG" alt="Imagen"></p>
+        </section>
+
+        <footer>
+          Guia nodejs is maintained by <a href="https://github.com/alu0100315462">alu0100315462</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
